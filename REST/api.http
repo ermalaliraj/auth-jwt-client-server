@@ -1,0 +1,17 @@
+### Call API
+GET http://localhost:8080/
+
+### Authenticate
+## Generated base64 encoded string for "user:pwd" "ermal:ermal" in https://www.base64encode.org/
+POST http://localhost:8080/token
+Authorization: Basic ZXJtYWw6ZXJtYWw=
+
+### Call API with Generated Token
+GET http://localhost:8080/
+Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiZXJtYWwiLCJleHAiOjE2NjY3OTkxMjEsImlhdCI6MTY2Njc4MTEyMSwic2NvcGUiOiJyZWFkIn0.AT3UL7tIQS1O3cHPepZD6R2iwYUiSX09f5MgjuhzlLWb25nJAOn0ejhT3llf4vNESrYwZ_P_2FW1-b1tNNERz9eQhgI_IcFe12-TxSy45Vc31zp-OyWnN0JhbQUDEc6tTMJ9dcWzCn8DQ75u8d3uoaUgVaiZ7gX0hmWiwmizC3FlcSu6-RLTVNNd6n-LaYwBABhU7qtM8dowiZP8-ea667J2GhFVML7RyqlYb_4taGfniVqESFi34XmUHvCbCtRQauJQVp6Q0eqr8sffV8DqdqstuBuhsl3lj0YL8mGAOo-uxyRqg0FJUihwzZAgLnOvXjmZbqLj2gRts47AaXWlm-piTNxRXqRe0ViMwycXNROOv8KiAeUjXPaBjipJ3RiPOY8aG_ice_vpbgOqNwBuhEr1iIzhTi1WD-RXMSJroO7r7x-eyUP0OCK9J1ReoEOffSVoczd56v8t1kzwc5qOvjpHyAk
+
+### Call API with Basci Token  (this shouldn't work ?)
+GET http://localhost:8080/
+Authorization: Basic ZXJtYWw6ZXJtYWw=
+
+###

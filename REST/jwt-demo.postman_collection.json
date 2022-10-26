@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "0d4b227b-3d2f-45bb-abb6-0aafd108bc26",
+		"name": "jwt-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2523178"
+	},
+	"item": [
+		{
+			"name": "token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ermal",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "ermal",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "secure/ping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJlcm1hbCIsInNjb3BlIjoicmVhZCIsImlzcyI6InNlbGYiLCJleHAiOjE2NjY1MzUxNjYsImlhdCI6MTY2NjUzMTU2Nn0.ZnK7B36kXKLl8Pu-QMu4qn2Wq3oXWYzhlRsDKBayGQHnr1Vmd4lDFJRGV3bFR8gB-TF_oJhWccxEC1Ynek-7Jtk_4ikYfoaVtbRientL6bTb76G2xyNwSVkIYNy-_dsuuls1uc3cW79krx6EWQ465sE8VfQED5hrhUk8lS3_FqPWG5QHS7joHM2CbGsV4dyRGywgbxhy8rFnJRAyUEwtoaY1iEdzjf6s6p9XHY7A1hrkS1bMNw60T2JT3nXKPg10oEAo2CufmCih_XhgAJC2nuc9vn1eRm7iarSI1kJ4fF8IfDUfVTc3oqvjls3xsv7RZZOGCjEp0zBpt2PlEndpeVRjH6EaIOVMJOTeGXjA_Ok9YNBpk9wYWpusMlpTlW0kWNatRT4cUVytO6fvOHCyIYdZoDn7wh-J5LHztu5IJPeFBSSaMJ5pN1j7MGUnMF8LPP7-qc1to6Li5lfbFfGfv7LlOvM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

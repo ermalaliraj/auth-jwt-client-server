@@ -1,0 +1,7 @@
+logging:
+  level:
+    root: info
+    org.springframework.security: debug
+    com.ea: DEBUG
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%-5level) [%t] %cyan(%c{1.}:%L %M) - %msg%n'

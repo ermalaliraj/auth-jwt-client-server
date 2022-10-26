@@ -1,0 +1,19 @@
+### Call API
+GET http://localhost:8080/
+
+### 1. generate JWT token using TokenServiceTest.test_printToken()
+
+### 2. Get Access Token
+POST http://localhost:8080/token
+grant-type:jwt-bearer
+assertion:eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhY2M6amFuZUBkZW1vIiwiaXNzIjoiR29IaXJpbmdDbGllbnRJZCIsImlhdCI6MTY2Njc5NDc4MSwidXNlciI6ImphbmUifQ.k6CM4ND1n3efjfsG_SwptE1Vgvh0AobKy6aj28A32hE
+
+### Call API with Generated Token
+GET http://localhost:8080/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOm51bGwsIm5iZiI6MTY2Njc5NDgxMywiaXNzIjoibXlBcGkiLCJleHAiOjE2NjY3OTQ4MTMsImlhdCI6MTY2Njc5NDgxMywidXNlciI6ImphbmUifQ.Uk8N74XXIfiPODnYfQCqxbO93pvkhnpPiXvkhmYtVXU
+
+### Call API with Basci Token  (this shouldn't work ?)
+GET http://localhost:8080/
+Authorization: Basic ZXJtYWw6ZXJtYWw=
+
+###
